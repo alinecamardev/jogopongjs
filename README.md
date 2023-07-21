@@ -40,5 +40,5 @@ Para executar o jogo Pong, siga as etapas abaixo:
 - [Documentação do p5.js](https://p5js.org/): Saiba mais sobre a biblioteca p5.js utilizada neste projeto.
 - [ChatGPT da OpenAI](https://openai.com/): Acesse o site oficial da OpenAI para explorar mais sobre o ChatGPT e suas aplicações.
 
-Divirta-se construindo o jogo Pong e aproveite todo o conhecimento que este curso tem a oferecer. Boa jornada! 🚀
+Divirta-se jogando o jogo Pong desenvolvido totalmente pelo ChatGPT! 🚀
 
