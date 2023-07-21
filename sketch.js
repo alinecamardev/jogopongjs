@@ -108,7 +108,19 @@ class Bola {
       this.y + this.r / 2 >= raquete.y - raquete.h / 2 &&
       this.y - this.r / 2 <= raquete.y + raquete.h / 2
     ) {
+      // Inverte a direção horizontal da bola
       this.velocidadeX *= -1;
+
+      // Calcula a posição relativa da bola na raquete (entre -0.5 e 0.5)
+      let posicaoRelativa = (this.y - raquete.y) / raquete.h;
+
+      // Define o ângulo da bola após a colisão
+      let anguloBola = ((posicaoRelativa * PI) / 3) * 2.3;
+
+      // Atualiza a velocidade vertical da bola com base no ângulo
+      this.velocidadeY = this.velocidadeX * Math.tan(anguloBola);
+
+      // Aumenta a velocidade da bola
       this.aumentarVelocidade();
     }
   }
