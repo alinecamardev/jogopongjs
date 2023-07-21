@@ -1,4 +1,4 @@
-# ChatGPT e JavaScript: Construa o Jogo Pong
+# ChatGPT e JavaScript: Jogo Pong
 
 "ChatGPT e JavaScript: Construa o Jogo Pong"! Neste curso, aprendi a utilizar o poderoso modelo de inteligência artificial ChatGPT em conjunto com a linguagem de programação JavaScript para criar o clássico jogo Pong.
 
