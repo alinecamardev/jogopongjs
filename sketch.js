@@ -5,9 +5,9 @@ function setup() {
   createCanvas(800, 400);
   raqueteJogador = new Raquete(30, height / 2, 10, 60);
   raqueteComputador = new Raquete(width - 40, height / 2, 10, 60);
-  bola = new Bola(width / 2, height / 2, 10);
-  barraSuperior = new Barra(0, 5, width, 5);
-  barraInferior = new Barra(0, height - 5, width, 5);
+  bola = new Bola(10);
+  barraSuperior = new Barra(0, 0, width, 5);
+  barraInferior = new Barra(0, height, width, 5);
 }
 
 function draw() {
@@ -48,20 +48,23 @@ class Raquete {
         this.y -= 3;
       }
     }
-    this.y = constrain(this.y, this.h / 2, height - this.h / 2);
+    this.y = constrain(
+      this.y,
+      this.h / 2 + barraSuperior.h,
+      height - this.h / 2 - barraInferior.h
+    );
   }
 
   exibir() {
     fill(255);
+    noStroke();
     rectMode(CENTER);
     rect(this.x, this.y, this.w, this.h);
   }
 }
 
 class Bola {
-  constructor(x, y, r) {
-    this.x = x;
-    this.y = y;
+  constructor(r) {
     this.r = r;
     this.reiniciar();
   }
@@ -126,7 +129,7 @@ class Barra {
   }
 
   exibir() {
-    fill(255);
+    fill(color(255, 0, 0));
     rectMode(CENTER);
     rect(this.x + this.w / 2, this.y, this.w, this.h);
   }
